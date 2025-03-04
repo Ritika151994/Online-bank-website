@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - City Bank</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <img src="img/logo.jpg" alt="City Bank logo" class="nav__logo" id="logo">
+            <ul class="nav__links">
+                <li class="nav__item"><a class="nav__link" href="index.html">Home</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">Features</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">Operations</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">Testimonials</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="login-panel">
+        <div class="login-container">
+            <h2>Login to Your Account</h2>
+            <p>Access your account securely and manage your transactions with ease.</p>
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <button style="background-color: green; color: white; padding: 10px 20px; border: none; cursor: pointer;">
+                    Login
+                </button>
+                <p class="signup-link">Don't have an account? <a href="signup.html">Sign Up</a></p>
+                <p id="errorMessage" style="color: red;"></p>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", async function(event) {
+            event.preventDefault();
+
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            const response = await fetch("http://localhost:5000/api/auth/login", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email, password })
+            });
+
+            const data = await response.json();
+            if (response.ok) {
+                alert("Login successful!");
+                localStorage.setItem("token", data.token); // Save token for authentication
+                window.location.href = "dashboard.html"; // Redirect to dashboard
+            } else {
+                document.getElementById("errorMessage").textContent = data.message;
+            }
+        });
+    </script>
+
+</body>
+</html>

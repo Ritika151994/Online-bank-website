@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+ <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="City Bank - The Future of Digital Banking" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>City Bank | Secure & Modern Banking</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <img src="logo.jpg" alt="City Bank logo" class="nav__logo" id="logo" data-version-number="3.1" />
+        <ul class="nav__links">
+          <li class="nav__item"><a class="nav__link" href="#features">Features</a></li>
+          <li class="nav__item"><a class="nav__link" href="#operations">Operations</a></li>
+          <li class="nav__item"><a class="nav__link" href="#testimonials">Testimonials</a></li>
+          <li class="nav__item">
+            <a class="nav__link" href="#savingsPanel">Create Account</a>
+          </li>          
+        </ul>
+      </nav>
+    </header>
+    <section class="hero">
+      <div class="hero__content">
+        <h1 style="color: #4CAF50; font-size: 32px; text-align: center;">Welcome to City Bank</h1>
+        <p style="color: white; font-size: 18px; text-align: center;">Your trusted banking partner.</p>
+        <div class="hero__buttons">
+          <button style="background-color: green; color: white; padding: 10px 20px; border: none; cursor: pointer;" 
+          onclick="location.href='signup.html'">Create Account</button>
+          <button style="background-color: green; color: white; padding: 10px 20px; border: none; cursor: pointer;" 
+        onclick="location.href='about.html'">Learn More</button>
+        </div>
+      </div>
+    </section>
+    <section id="savingsPanel" class="savings-panel">
+      <div class="savings-container">
+        <div class="savings-text">
+          <h2>The only Savings Account you will ever need</h2>
+          <p>With <b>iMobile</b> and <b>Internet Banking</b>, manage your account <b>Anytime, Anywhere.</b></p>
+        </div>
+        <div class="savings-form">
+          <h3>Savings Account Opening at Your Doorstep</h3>
+          <form id="registerForm">
+            <input type="text" id="name" placeholder="Full Name" required />
+            <input type="text" id="email" placeholder="Email" required />
+            <input type="password" id="password" placeholder="Password" required />
+            <button type="submit" class="btn">Open Account</button>
+          </form>
+        </div>
+      </div>
+    </section>    
+
+   <!-- Features Section -->
+    <section class="section" id="features">
+      <div class="section__title">
+        <h2 class="section__description">Features</h2>
+        <h3 class="section__header">Modern Banking with Smart Solutions</h3>
+      </div>
+
+      <div class="features-container">
+        <div class="feature-card">
+          <h3>Digital Banking</h3>
+          <p>Experience secure & seamless banking on-the-go with <b>Mobile App and Internet Banking</b>.</p>
+          <img src="Digital Banking.jpg" alt="Illustration of digital banking" class="feature-image" />
+        </div>
+
+        <div class="feature-card">
+          <h3>Investments</h3>
+          <p>Secure your future with easy investing in <b>FD, Mutual funds, stocks</b> and more, tailored to your goals.</p>
+          <img src="investment.jpg" alt="Investment opportunities illustration" class="feature-image" />
+        </div>
+
+        <div class="feature-card">
+          <h3>Premium Cards</h3>
+          <p>Earn rewards on every spend with our exclusive Credit Cards and use our Forex Card to fulfill your travel goals.</p>
+          <img src="Premium Cards.jpg" alt="Illustration of premium credit cards" class="feature-image" />
+        </div>
+
+        <div class="feature-card">
+          <h3>Pre-approved Loans</h3>
+          <p>Enjoy a paperless journey with instant sanction and disbursal of <b>Personal Loan, Home Loan, and Auto Loan</b>.</p>
+          <img src="Pre-Approved Loans.jpg" alt="Loan approval process illustration" class="feature-image" />
+        </div>
+        <div class="feature-card">
+          <h3>Simplified Payments</h3>
+          <P>Pay effortlessly using <>UPI,Scan to Pay,Bills & Fund transfers</b>on your iMobile app</P>
+          <img src="payment.jpg" alt="Illustration of simplified payments" class="feature-image" />
+        </div>
+        <div class ="feature-card">
+          <h3>Offers</h3>
+          <p><b>Explore exclusive offers</b>across lifestyle,shopping,dinning,travel,entertainment,and more.</p>
+          <img src="offers.jpg" alt="Illustration of exclusive offers" class="feature-image" />
+        </div>    
+      </div>
+    </section>
+    <!-- Operations Section -->
+    <section class="section" id="operations">
+      <div class="section__title">
+        <h2 class="section__description">Operations</h2>
+        <h3 class="section__header">Instant Solutions for Your Banking Needs</h3>
+      </div>
+    <div class="operations">
+      <div class="operations__tab-container">
+        <button class="operations__tab operations__tab--1" data-tab="1"><span>01</span>Instant Transfers</button>
+        <button class="operations__tab operations__tab--2" data-tab="2"><span>02</span>Instant Loans</button>
+        <button class="operations__tab operations__tab--3" data-tab="3"><span>03</span>Instant Closing</button>
+      </div>
+      <div class="operations__content operations__content--1 operations__content--active">
+        <div class="operations__icon operations__icon--transfer">
+          <img src="transfer.jpg" alt="Transfer Icon" />
+        </div>
+        <h5 class="operations__header">Transfer money to anyone, instantly! No fees, no BS.</h5>
+        <p>Send money to friends, family, or businesses in just a few clicks. Enjoy seamless and secure transactions with no hidden charges.      
+        </p>
+      </div>
+      <div class="operations__content operations__content--2">
+        <div class="operations__icon operations__icon--2">
+          <img src="loan.jpg" alt="Loan Icon" />
+        </div>
+        <h5 class="operations__header">Buy a home or make your dreams come true, with instant loans.</h5>
+        <p>
+          Need financial support? Get pre-approved loans with minimal paperwork and instant approval. 
+          Whether it's for a home, car, or personal needs, we've got you covered.      
+        </p>
+      </div>
+      <div class="operations__content operations__content--3">
+        <div class="operations__icon operations__icon--3">
+          <img src="close.jpg" alt="Close Icon" />
+        </div>
+        <h5 class="operations__header">
+          No longer need your account? No problem! Close it instantly.
+        </h5>
+        <p>
+          Manage your banking hassle-free. If you ever decide to close your account, do it with ease 
+    through our digital banking platform, with no unnecessary delays.
+        </p>
+      </div>
+    </div>
+  </section>
+
+    <!-- Testimonials Section -->
+    <section class="section" id="testimonials">
+      <div class="section__title">
+        <h2 class="section__description">Join Our Community</h2>
+        <h3 class="section__header">Trusted by Millions Worldwide</h3>
+      </div>
+    </section>
+
+    <section class="section section--sign-up">
+      <div class="section__title">
+        <h3 class="section__header">
+          The best day to join Bankist was one year ago. The second best is
+          today!
+        </h3>
+      </div>
+      <button class="btn btn--show-modal">Open your free account today!</button>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+      <ul class="footer__nav">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </footer>
+    <!-- Overlay for Modal -->
+    <div class="overlay hidden"></div>
+<!-- Place this before closing body tag -->
+<script src="script.js"></script>
+  </body>
+</html>
+

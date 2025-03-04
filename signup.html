@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - City Bank</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <img src="img/logo.jpg" alt="City Bank logo" class="nav__logo" id="logo">
+            <ul class="nav__links">
+                <li class="nav__item"><a class="nav__link" href="index.html">Home</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">Features</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">Operations</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">Testimonials</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="signup-panel">
+        <div class="signup-container">
+            <h2>Create Your Account</h2>
+            <p>Get started with the most secure and seamless banking experience.</p>
+            <form id="registerForm">
+                <div class="input-group">
+                    <input type="text" id="name" placeholder="Full Name" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <button style="background-color: green; color: white; padding: 10px 20px; border: none; cursor: pointer;">
+                    Sign Up
+                </button>
+                <p class="login-link">Already have an account? <a href="login.html">Login</a></p>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById("registerForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Account created successfully!");
+            window.location.href = "index.html";
+        });
+    </script>
+</body>
+</html>
